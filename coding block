@@ -1,1 +1,25 @@
 # DECIMAL-TO-OCTAL
+
+
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+int ans = 0;
+        int mult = 1;
+
+        while(n != 0){
+
+            int rem = n % 8;
+
+            ans = ans + rem * mult;
+            mult = mult * 10;
+            n = n / 8;
+        }
+
+       System.out.println(ans);
+
+    }
+    
+}
